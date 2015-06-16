@@ -31,9 +31,7 @@ int main(int argc, const char * argv[]) {
 //            
 //        }];
 //        NSLog(@"Sorted %@", sortedArray);
-//        
-        
-        
+//
         
         
         // Sorting Alphabetically
@@ -82,19 +80,8 @@ int main(int argc, const char * argv[]) {
             NSString *obj1String = [NSString stringWithString:(NSString *)obj1];
             NSString *obj2String = [NSString stringWithString:(NSString *)obj2];
             
-//            NSCharacterSet *eCharSet = [NSCharacterSet characterSetWithCharactersInString:@"e"];
-//            NSRange rangeOfEInObj1 = [obj1String rangeOfCharacterFromSet:eCharSet
-//                                                                 options:0
-//                                                                   range:NSMakeRange(0, obj1String.length)];
-//            
-//            NSRange rangeOfEInObj2 = [obj2String rangeOfCharacterFromSet:eCharSet
-//                                                                 options:0
-//                                                                   range:NSMakeRange(0, obj2String.length)];
-            
             NSUInteger numOfEInObj1 = [[obj1String componentsSeparatedByString:@"e"] count]-1;
             NSUInteger numOfEInObj2 = [[obj2String componentsSeparatedByString:@"e"] count]-1;
-            
-            //NSLog(@"%lu", rangeOfEInObj1.length);
             
             if (numOfEInObj1 < numOfEInObj2) {
                 return (NSComparisonResult)NSOrderedDescending;
