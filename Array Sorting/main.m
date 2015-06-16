@@ -81,7 +81,9 @@ int main(int argc, const char * argv[]) {
             NSString *obj2String = [NSString stringWithString:(NSString *)obj2];
             
             NSUInteger numOfEInObj1 = [[obj1String componentsSeparatedByString:@"e"] count]-1;
+                       numOfEInObj1 += [[obj1String componentsSeparatedByString:@"E"] count]-1;
             NSUInteger numOfEInObj2 = [[obj2String componentsSeparatedByString:@"e"] count]-1;
+                       numOfEInObj2 += [[obj2String componentsSeparatedByString:@"E"] count]-1;
             
             if (numOfEInObj1 < numOfEInObj2) {
                 return (NSComparisonResult)NSOrderedDescending;
